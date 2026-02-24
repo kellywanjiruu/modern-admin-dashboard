@@ -14,7 +14,7 @@ A vibrant, professional admin dashboard built with HTML, CSS, and JavaScript. Fe
 
 ## Live Demo
 
-[Add your GitHub Pages link here]
+https://kellywanjiruu.github.io/modern-admin-dashboard/
 
 ## Screenshots
 
@@ -46,4 +46,5 @@ A vibrant, professional admin dashboard built with HTML, CSS, and JavaScript. Fe
 ## License
 
 MIT
+
 
