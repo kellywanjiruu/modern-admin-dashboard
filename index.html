@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Modern Analytics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <i class="fas fa-chart-pie"></i>
+            <span>Dashboard</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-item active" data-page="dashboard">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+          </div>
+          <div class="nav-item" data-page="analytics">
+            <i class="fas fa-chart-line"></i>
+            <span>Analytics</span>
+          </div>
+          <div class="nav-item" data-page="calendar">
+            <i class="fas fa-calendar"></i>
+            <span>Calendar</span>
+          </div>
+          <div class="nav-item" data-page="reports">
+            <i class="fas fa-file-alt"></i>
+            <span>Reports</span>
+          </div>
+          <div class="nav-item" data-page="settings">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-info">
+            <div class="user-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-details">
+              <span class="user-name">Alex Rivera</span>
+              <span class="user-role">Product Manager</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-left">
+            <button class="mobile-menu" id="mobileMenu">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="search-wrapper">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search..." id="searchInput" />
+              <span class="search-hint">⌘K</span>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="notifications-btn" id="notificationsBtn">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Dynamic Content Area -->
+        <div class="content" id="content">
+          <!-- Dashboard Page -->
+          <div class="page active" id="dashboard-page">
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon revenue">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">Revenue</span>
+                  <span class="stat-value">$54,239</span>
+                  <span class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i> +12.5%
+                  </span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon users">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">Users</span>
+                  <span class="stat-value">8,549</span>
+                  <span class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i> +8.2%
+                  </span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon orders">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">Orders</span>
+                  <span class="stat-value">1,423</span>
+                  <span class="stat-change negative">
+                    <i class="fas fa-arrow-down"></i> -3.1%
+                  </span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon conversion">
+                  <i class="fas fa-percent"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-label">Conversion</span>
+                  <span class="stat-value">23.8%</span>
+                  <span class="stat-change positive">
+                    <i class="fas fa-arrow-up"></i> +2.4%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Recent Orders</h3>
+                <button class="btn-text">
+                  View All <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#OR-2456</td>
+                      <td>Sarah Johnson</td>
+                      <td>MacBook Pro</td>
+                      <td>$2,399</td>
+                      <td><span class="badge success">Delivered</span></td>
+                    </tr>
+                    <tr>
+                      <td>#OR-2457</td>
+                      <td>Michael Chen</td>
+                      <td>iPhone 15 Pro</td>
+                      <td>$1,199</td>
+                      <td><span class="badge warning">Processing</span></td>
+                    </tr>
+                    <tr>
+                      <td>#OR-2458</td>
+                      <td>Emma Davis</td>
+                      <td>Sony Headphones</td>
+                      <td>$399</td>
+                      <td><span class="badge info">Shipped</span></td>
+                    </tr>
+                    <tr>
+                      <td>#OR-2459</td>
+                      <td>James Wilson</td>
+                      <td>iPad Air</td>
+                      <td>$599</td>
+                      <td><span class="badge success">Delivered</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analytics Page -->
+          <div class="page" id="analytics-page">
+            <div class="page-header">
+              <h2>Analytics Overview</h2>
+              <select class="date-select">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 3 months</option>
+              </select>
+            </div>
+
+            <div class="analytics-grid">
+              <!-- Traffic Chart -->
+              <div class="card">
+                <h3>Website Traffic</h3>
+                <div class="chart-container">
+                  <div class="chart-bars">
+                    <div class="bar-item">
+                      <div class="bar" style="height: 80px"></div>
+                      <span>Mon</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 120px"></div>
+                      <span>Tue</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 95px"></div>
+                      <span>Wed</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 140px"></div>
+                      <span>Thu</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 110px"></div>
+                      <span>Fri</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 70px"></div>
+                      <span>Sat</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 65px"></div>
+                      <span>Sun</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Top Products -->
+              <div class="card">
+                <h3>Top Products</h3>
+                <div class="products-list">
+                  <div class="product-item">
+                    <span>MacBook Pro</span>
+                    <div class="product-stats">
+                      <span>234 sales</span>
+                      <span class="product-value">$98.4K</span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <span>iPhone 15</span>
+                    <div class="product-stats">
+                      <span>189 sales</span>
+                      <span class="product-value">$72.3K</span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <span>iPad Air</span>
+                    <div class="product-stats">
+                      <span>156 sales</span>
+                      <span class="product-value">$45.2K</span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <span>AirPods Pro</span>
+                    <div class="product-stats">
+                      <span>312 sales</span>
+                      <span class="product-value">$41.5K</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- User Demographics -->
+              <div class="card full-width">
+                <h3>User Demographics</h3>
+                <div class="demographics-grid">
+                  <div class="demographic-item">
+                    <span class="age-group">18-24</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 25%">25%</div>
+                    </div>
+                  </div>
+                  <div class="demographic-item">
+                    <span class="age-group">25-34</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 45%">45%</div>
+                    </div>
+                  </div>
+                  <div class="demographic-item">
+                    <span class="age-group">35-44</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 20%">20%</div>
+                    </div>
+                  </div>
+                  <div class="demographic-item">
+                    <span class="age-group">45+</span>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 10%">10%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar Page -->
+          <div class="page" id="calendar-page">
+            <div class="page-header">
+              <h2>Calendar</h2>
+              <button class="btn-primary" id="addEventBtn">
+                <i class="fas fa-plus"></i> Add Event
+              </button>
+            </div>
+
+            <div class="calendar-wrapper">
+              <div class="calendar-header">
+                <button class="calendar-nav" id="prevMonth">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <h3 id="currentMonthYear">February 2026</h3>
+                <button class="calendar-nav" id="nextMonth">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="weekdays">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+              </div>
+
+              <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar days will be generated by JS -->
+              </div>
+            </div>
+
+            <!-- Events List -->
+            <div class="events-list">
+              <h4>Upcoming Events</h4>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">23</span>
+                  <span class="event-month">Feb</span>
+                </div>
+                <div class="event-details">
+                  <span class="event-title">Product Review Meeting</span>
+                  <span class="event-time">10:00 AM - 11:30 AM</span>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">24</span>
+                  <span class="event-month">Feb</span>
+                </div>
+                <div class="event-details">
+                  <span class="event-title">Design Sprint</span>
+                  <span class="event-time">2:00 PM - 4:00 PM</span>
+                </div>
+              </div>
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">25</span>
+                  <span class="event-month">Feb</span>
+                </div>
+                <div class="event-details">
+                  <span class="event-title">Client Presentation</span>
+                  <span class="event-time">11:00 AM - 12:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reports Page -->
+          <div class="page" id="reports-page">
+            <div class="page-header">
+              <h2>Reports & Analytics</h2>
+              <div class="page-actions">
+                <button
+                  class="btn-outline"
+                  onclick="alert('📊 Exporting report...')"
+                >
+                  <i class="fas fa-download"></i> Export
+                </button>
+                <button
+                  class="btn-primary"
+                  onclick="alert('📈 Generating new report...')"
+                >
+                  <i class="fas fa-plus"></i> New Report
+                </button>
+              </div>
+            </div>
+
+            <!-- Report Cards -->
+            <div class="reports-grid">
+              <div class="report-card">
+                <div class="report-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="report-info">
+                  <h3>Sales Report</h3>
+                  <p>Monthly sales performance and trends</p>
+                  <div class="report-meta">
+                    <span
+                      ><i class="fas fa-calendar"></i> Last updated: Today</span
+                    >
+                    <button
+                      class="btn-text"
+                      onclick="alert('📊 Opening Sales Report...')"
+                    >
+                      View <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="report-info">
+                  <h3>User Analytics</h3>
+                  <p>User growth, engagement, and retention</p>
+                  <div class="report-meta">
+                    <span
+                      ><i class="fas fa-calendar"></i> Last updated:
+                      Yesterday</span
+                    >
+                    <button
+                      class="btn-text"
+                      onclick="alert('👥 Opening User Analytics...')"
+                    >
+                      View <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="report-info">
+                  <h3>Order Summary</h3>
+                  <p>Order volume, revenue, and fulfillment</p>
+                  <div class="report-meta">
+                    <span
+                      ><i class="fas fa-calendar"></i> Last updated: 2 days
+                      ago</span
+                    >
+                    <button
+                      class="btn-text"
+                      onclick="alert('📦 Opening Order Summary...')"
+                    >
+                      View <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-icon">
+                  <i class="fas fa-trending-up"></i>
+                </div>
+                <div class="report-info">
+                  <h3>Growth Metrics</h3>
+                  <p>KPIs, conversion rates, and forecasts</p>
+                  <div class="report-meta">
+                    <span><i class="fas fa-calendar"></i> Weekly report</span>
+                    <button
+                      class="btn-text"
+                      onclick="alert('📈 Opening Growth Metrics...')"
+                    >
+                      View <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Reports Table -->
+            <div class="card" style="margin-top: 24px">
+              <div class="card-header">
+                <h3>Recent Reports</h3>
+                <button
+                  class="btn-text"
+                  onclick="alert('📋 Viewing all reports...')"
+                >
+                  View All
+                </button>
+              </div>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Report Name</th>
+                      <th>Type</th>
+                      <th>Date Generated</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Q1 2026 Sales Analysis</td>
+                      <td>Sales</td>
+                      <td>Feb 20, 2026</td>
+                      <td><span class="badge success">Completed</span></td>
+                      <td>
+                        <button
+                          class="btn-text"
+                          onclick="alert('📄 Downloading report...')"
+                        >
+                          Download
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>User Engagement Report</td>
+                      <td>Analytics</td>
+                      <td>Feb 18, 2026</td>
+                      <td><span class="badge success">Completed</span></td>
+                      <td>
+                        <button
+                          class="btn-text"
+                          onclick="alert('📄 Downloading report...')"
+                        >
+                          Download
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Monthly Revenue Summary</td>
+                      <td>Finance</td>
+                      <td>Feb 15, 2026</td>
+                      <td><span class="badge warning">Processing</span></td>
+                      <td>
+                        <button class="btn-text" disabled style="opacity: 0.5">
+                          Pending
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Settings Page -->
+          <div class="page" id="settings-page">
+            <div class="page-header">
+              <h2>Settings</h2>
+              <button
+                class="btn-primary"
+                onclick="alert('⚙️ Saving preferences...')"
+              >
+                <i class="fas fa-save"></i> Save Changes
+              </button>
+            </div>
+
+            <div class="settings-grid">
+              <!-- Profile Settings -->
+              <div class="settings-card">
+                <h3>Profile Information</h3>
+                <div class="settings-form">
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input
+                      type="text"
+                      value="Alex Rivera"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input
+                      type="email"
+                      value="alex.rivera@company.com"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Role</label>
+                    <input
+                      type="text"
+                      value="Product Manager"
+                      placeholder="Your role"
+                      readonly
+                      style="background: #f1f5f9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Notification Settings -->
+              <div class="settings-card">
+                <h3>Notifications</h3>
+                <div class="settings-list">
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Email Notifications</span>
+                      <small>Receive updates via email</small>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked id="emailNotif" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Push Notifications</span>
+                      <small>Browser push alerts</small>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked id="pushNotif" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Order Updates</span>
+                      <small>New order notifications</small>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked id="orderNotif" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Marketing Emails</span>
+                      <small>Promotional content</small>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" id="marketNotif" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Display Settings -->
+              <div class="settings-card">
+                <h3>Display Preferences</h3>
+                <div class="settings-form">
+                  <div class="form-group">
+                    <label>Theme</label>
+                    <select id="themeSelect">
+                      <option value="light">Light Mode</option>
+                      <option value="dark">Dark Mode</option>
+                      <option value="system">System Default</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Language</label>
+                    <select>
+                      <option>English (US)</option>
+                      <option>Spanish</option>
+                      <option>French</option>
+                      <option>German</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Timezone</label>
+                    <select>
+                      <option>Pacific Time (PT)</option>
+                      <option>Eastern Time (ET)</option>
+                      <option selected>Central Time (CT)</option>
+                      <option>Mountain Time (MT)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Security Settings -->
+              <div class="settings-card">
+                <h3>Security</h3>
+                <div class="settings-list">
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Two-Factor Authentication</span>
+                      <small>Add extra security to your account</small>
+                    </div>
+                    <button
+                      class="btn-outline"
+                      onclick="alert('🔐 Setting up 2FA...')"
+                    >
+                      Enable
+                    </button>
+                  </div>
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Change Password</span>
+                      <small>Update your password regularly</small>
+                    </div>
+                    <button
+                      class="btn-outline"
+                      onclick="alert('🔑 Opening password change...')"
+                    >
+                      Update
+                    </button>
+                  </div>
+                  <div class="settings-item">
+                    <div class="settings-item-info">
+                      <span>Login Sessions</span>
+                      <small>Manage active sessions</small>
+                    </div>
+                    <button
+                      class="btn-outline"
+                      onclick="alert('💻 Viewing active sessions...')"
+                    >
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Notifications Panel -->
+    <div class="notifications-panel" id="notificationsPanel">
+      <div class="panel-header">
+        <h3>Notifications</h3>
+        <button class="close-panel" id="closeNotifications">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="notifications-list">
+        <div class="notification-item unread">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="notification-content">
+            <p>New order received <strong>$2,399</strong></p>
+            <span>5 minutes ago</span>
+          </div>
+        </div>
+        <div class="notification-item">
+          <i class="fas fa-user-plus"></i>
+          <div class="notification-content">
+            <p>New user registered</p>
+            <span>1 hour ago</span>
+          </div>
+        </div>
+        <div class="notification-item">
+          <i class="fas fa-chart-line"></i>
+          <div class="notification-content">
+            <p>Weekly report ready</p>
+            <span>3 hours ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
