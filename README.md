@@ -4,13 +4,13 @@ A vibrant, professional admin dashboard built with HTML, CSS, and JavaScript. Fe
 
 ## Features
 
-- ✨ Responsive sidebar navigation
-- 📊 Animated statistics cards
-- 👤 User profile section
-- 🔔 Interactive notification area
-- 📱 Mobile-friendly table layout
-- 🎨 Modern gradient design
-- 💫 Smooth animations & transitions
+- Responsive sidebar navigation
+- Animated statistics cards
+- User profile section
+- Interactive notification area
+- Mobile-friendly table layout
+- Modern gradient design
+- Smooth animations & transitions
 
 ## Live Demo
 
@@ -18,7 +18,10 @@ A vibrant, professional admin dashboard built with HTML, CSS, and JavaScript. Fe
 
 ## Screenshots
 
-[Add screenshots here]
+<img width="1366" height="768" alt="Screenshot (32)" src="https://github.com/user-attachments/assets/e26d3b33-7579-4e51-8239-63aedec9d126" />
+<img width="1366" height="768" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/46e8bc15-3fc9-48db-a1ea-75a3d07ae9f8" />
+<img width="1366" height="768" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/7f88c38f-96fc-4dc9-ad22-26aa6ebb48f6" />
+
 
 ## Technologies Used
 
@@ -43,3 +46,4 @@ A vibrant, professional admin dashboard built with HTML, CSS, and JavaScript. Fe
 ## License
 
 MIT
+
